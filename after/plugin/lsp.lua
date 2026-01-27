@@ -109,7 +109,6 @@ lspconfig.clangd.setup({
 		clangdFileStatus = true
 	},
 })
-
 -- Keybindings para LSP
 vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})

@@ -50,6 +50,10 @@ dap.configurations.c = {
         end,
         cwd = '${workspaceFolder}',
         stopOnEntry = false,
-        args = {"-0", "+0"},
+		args = function()
+			local input = vim.fn.input('Arguments: ')
+			return vim.fn.split(input, " ", true)
+		end,
+
     },
 }

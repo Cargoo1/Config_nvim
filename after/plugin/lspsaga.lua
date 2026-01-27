@@ -28,5 +28,10 @@ vim.diagnostic.config({
   update_in_insert = false,
   severity_sort = true,
 })
--- Desactiva el autocmd interno de la bombilla de lspsaga
-
+vim.keymap.set("n", "gh", "<cmd>Lspsaga lsp_finder<CR>", { silent = true, desc = "Finder LSP" })
+vim.keymap.set("n", "<leader>pd", "<cmd>Lspsaga peek_definition<CR>", { silent = true, desc = "Previsualizar definición" })
+vim.keymap.set("n", "<leader>gd", "<cmd>Lspsaga goto_definition<CR>", { silent = true, desc = "Ir a definición" })
+vim.keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", { silent = true, desc = "Acción de código" })
+vim.keymap.set("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", { silent = true, desc = "Renombrar" })
+vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", { silent = true, desc = "Documentación flotante" })
+vim.keymap.set("n", "<leader>o", "<cmd>Lspsaga outline<CR>", { silent = true, desc = "Esquema del archivo" })

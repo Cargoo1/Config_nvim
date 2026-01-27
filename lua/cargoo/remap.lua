@@ -49,3 +49,5 @@ vim.keymap.set("n", "<leader>tt", "<cmd>ToggleTerm<CR>", { noremap = true, silen
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>:ToggleTerm<CR>")
 
 vim.keymap.set("n", "W", "<cmd>w<CR>")
+vim.keymap.set("n", "<C-w>j","<C-w>k" );
+vim.keymap.set("n", "<C-w>k","<C-w>j" );
