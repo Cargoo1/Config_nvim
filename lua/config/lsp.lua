@@ -3,7 +3,7 @@ vim.lsp.enable({
 })
 vim.diagnostic.config({
 	virtual_lines = true,
-	virtual_text = {
+	virtual_lines = {
 		source = "if_many",
 		format = function(diagnostic)
 			if diagnostic.source == 'clangd' then
