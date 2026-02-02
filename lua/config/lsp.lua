@@ -2,7 +2,16 @@ vim.lsp.enable({
     "clangd",
 })
 vim.diagnostic.config({
-    virtual_lines = true,
+	virtual_lines = true,
+	virtual_text = {
+		source = "if_many",
+		format = function(diagnostic)
+			if diagnostic.source == 'clangd' then
+				return string.gsub(diagnostic.message, "^[%w%-_]+: ", "")
+			end
+			return diagnostic.message
+		end,
+	},
     -- virtual_text = true,
     underline = true,
     update_in_insert = false,
