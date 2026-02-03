@@ -11,7 +11,10 @@ return {
 		},
 		keys = {
 			{"<leader>f", ":Telescope find_files<CR>", silent = true, desc = "Find files"},
-			{"<leader>g", ":Telescope git_files<CR>", silent = true, desc = "Find files"}
+			{"<leader>g", ":Telescope git_files<CR>", silent = true, desc = "Find files"},
+			{"<leader>tg", ":Telescope live_grep<CR>", silent = true, desc = "Find files"},
+			{"<leader>sg", ":Telescope grep_string<CR>", silent = true, desc = "Find files"},
+			{"<leader>rf", ":Telescope lsp_references<CR>", silent = true, desc = "Find files"},
 		}
 	},
 	{
@@ -37,5 +40,8 @@ return {
 	--			 --
 	{
 		'ThePrimeagen/harpoon',
+	},
+	{
+		'mbbill/undotree',
 	},
 }

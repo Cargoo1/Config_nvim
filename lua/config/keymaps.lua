@@ -31,3 +31,4 @@ map("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
 map("n", "<leader>tt", "<cmd>ToggleTerm<CR>", { noremap = true, silent = true })
 
 map("n", "W", "<cmd>w<CR>")
+map("n", "<leader>u", vim.cmd.UndotreeToggle)

@@ -3,8 +3,17 @@ vim.lsp.enable({
 })
 vim.diagnostic.config({
     virtual_lines = true,
+	virtual_lines = {
+		source = "if_many",
+		format = function(diagnostic)
+			if diagnostic.source == 'clangd' then
+				return string.gsub(diagnostic.message, "^[%w%-_]+: ", "")
+			end
+			return diagnostic.message
+		end,
+	},
     -- virtual_text = true,
-    underline = true,
+    underline = false,
     update_in_insert = false,
     severity_sort = true,
     float = {
@@ -24,3 +33,4 @@ vim.diagnostic.config({
         },
     },
 })
+vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
